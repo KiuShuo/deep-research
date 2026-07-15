@@ -47,6 +47,17 @@ PR 应保持小而可审查，并包含：
 - 安全、成本、兼容性或数据迁移风险；
 - 已知限制和后续工作。
 
+如果 PR 使用多个 AI 工具协作，还必须记录：
+
+- 主实现者、独立审查者和集成责任人；
+- 派发时的验收条件；
+- 主实现 commit SHA 和审查所基于的 commit SHA；
+- ZCode 提出的有效问题、误报和处理结果；
+- 是否在独立分支或 worktree 中完成实现与审查；
+- 工具未能直接调度、需要人工交接的环节。
+
+多工具协作不得在同一分支或 working tree 中并行编辑。完整流程见 [`docs/ai-collaboration.md`](docs/ai-collaboration.md)。
+
 合并前必须通过 CI。默认使用 Squash Merge，确保 `main` 历史按意图演进。
 
 ## Definition of Done

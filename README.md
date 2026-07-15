@@ -38,6 +38,7 @@
 - 每章验收标准见 [`docs/roadmap.md`](docs/roadmap.md)。
 - 分支、提交和 PR 规则见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
 - 跨模块的重要决策使用 [`docs/adr/`](docs/adr/) 记录。
+- Cursor、ZCode 与 Codex 的职责、交接和审查流程见 [`docs/ai-collaboration.md`](docs/ai-collaboration.md)。
 
 ## 本地开发
 
