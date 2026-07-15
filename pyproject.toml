@@ -11,6 +11,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "mypy>=1.15.0",
     "pytest>=8.0.0",
     "ruff>=0.9.0",
 ]
@@ -23,10 +24,20 @@ build-backend = "hatchling.build"
 packages = ["src/deep_research"]
 
 [tool.pytest.ini_options]
+addopts = '--strict-markers -m "not integration"'
 pythonpath = ["src"]
 testpaths = ["tests"]
+markers = [
+    "integration: tests that require external services or cross-component setup",
+]
 
 [tool.ruff]
 line-length = 100
 target-version = "py311"
 
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "SIM", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
