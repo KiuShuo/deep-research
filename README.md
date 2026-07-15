@@ -6,7 +6,7 @@
 
 | 章节 | 主题 | 状态 |
 | --- | --- | --- |
-| 01 | 为什么需要 Deep Research | 待开始 |
+| 01 | 为什么需要 Deep Research | 已完成 |
 | 02 | Agent 执行框架：ReAct → IterResearch | 待开始 |
 | 03 | 工具集设计：Search / Visit / Scholar / Python | 待开始 |
 | 04 | 多轮对话与长程记忆管理 | 待开始 |
