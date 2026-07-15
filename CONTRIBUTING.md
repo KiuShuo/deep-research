@@ -29,13 +29,15 @@ uv run pytest -m integration
 采用 Conventional Commits：
 
 ```text
-feat: add bounded ReAct execution loop
-fix: stop retrying non-retryable visit errors
-docs: define chapter 2 acceptance criteria
-test: cover maximum-step termination
-refactor: separate model provider adapter
-chore: update development tooling
+feat: 添加有限步数的 ReAct 执行循环
+fix: 停止重试不可重试的 Visit 错误
+docs: 定义第 2 章验收标准
+test: 覆盖最大步数终止场景
+refactor: 拆分模型供应商适配器
+chore: 更新开发工具配置
 ```
+
+类型前缀保留英文，冒号后的提交描述必须使用中文。分支名、代码标识符、协议字段和第三方专有名词可保留英文。
 
 ## Pull Request
 
@@ -47,6 +49,8 @@ PR 应保持小而可审查，并包含：
 - 安全、成本、兼容性或数据迁移风险；
 - 已知限制和后续工作。
 
+PR 标题、正文、Review 结论、问题清单和交接报告必须使用中文。
+
 如果 PR 使用多个 AI 工具协作，还必须记录：
 
 - 主实现者、独立审查者和集成责任人；
@@ -57,6 +61,13 @@ PR 应保持小而可审查，并包含：
 - 工具未能直接调度、需要人工交接的环节。
 
 多工具协作不得在同一分支或 working tree 中并行编辑。完整流程见 [`docs/ai-collaboration.md`](docs/ai-collaboration.md)。
+
+## AI 协作语言
+
+- Codex 给 Cursor、ZCode 的任务包、补充指令和修复反馈必须使用中文；
+- Cursor、ZCode 的计划、过程更新、实现交接和独立审查报告必须使用中文；
+- Git 提交、PR 和 Review 中面向协作者的描述性记录必须使用中文；
+- 技术上必须保持原样的代码、命令、路径、模型名、协议字段和错误原文可保留英文，并在必要时补充中文说明。
 
 合并前必须通过 CI。默认使用 Squash Merge，确保 `main` 历史按意图演进。
 
